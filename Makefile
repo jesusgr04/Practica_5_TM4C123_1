@@ -78,10 +78,11 @@ ${COMPILER}:
 #
 # Rules for building the Project Zero Example.
 #
-${COMPILER}/main.axf: ${COMPILER}/main.o
+${COMPILER}/main.axf: ${COMPILER}/main2.o
 ${COMPILER}/main.axf: ${COMPILER}/startup_${COMPILER}.o
 ${COMPILER}/main.axf: ${COMPILER}/GPIO.o
 ${COMPILER}/main.axf: ${COMPILER}/PLL.o
+${COMPILER}/main.axf: ${COMPILER}/UART.o
 ${COMPILER}/main.axf: ${COMPILER}/PWM.o
 ${COMPILER}/main.axf: main.ld
 SCATTERgcc_main=main.ld
